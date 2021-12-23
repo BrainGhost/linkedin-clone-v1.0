@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 999;
   align-items: center;
+  background-color: white;
 }
 .header_left {
   display: flex;
@@ -30,25 +31,28 @@
   outline: none;
   border: none;
   background: none;
+  width: 250px;
 }
 .header_right {
   display: flex;
 }
 .verticalBar {
   width: 2px;
-  height: 82px;
+  height: 72px;
   border-left: 0.1px solid lightgray;
+  margin: 0 15px;
 }
-.optionPremium {
+button.optionPremium {
   text-align: center;
   font-size: 14px;
   font-weight: 500;
-  text-decoration: none;
-  margin: 20px;
+  margin: 15px;
   color: gray;
   cursor: pointer;
   transition: 500ms ease;
+  background-color: white;
+  border: none;
 }
-.optionPremium:hover {
+button.optionPremium:hover {
   text-decoration: underline;
 }

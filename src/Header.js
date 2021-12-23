@@ -24,16 +24,13 @@ function Header() {
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notification" />
-        <HeaderOption
-          avatar="https://www.clipartmax.com/png/middle/257-2572603_user-man-social-avatar-profile-icon-man-avatar-in-circle.png"
-          title="Me"
-        />
+        <HeaderOption avatar="./avatar.svg" title="Me" />
         <div className="verticalBar"></div>
         <HeaderOption Icon={AppsIcon} title="Work" />
-        <a className="optionPremium">
+        <button className="optionPremium">
           Try Premium for
           <br /> free
-        </a>
+        </button>
       </div>
     </div>
   );
