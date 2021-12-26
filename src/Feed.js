@@ -14,6 +14,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
+import FlipMove from "react-flip-move";
 import "./Feed.css";
 import { db } from "./firebase";
 import InputOption from "./InputOption";
@@ -62,21 +63,26 @@ function Feed() {
           </form>
         </div>
         <div className="feed_inputOptions">
-          <InputOption Icon={Image} title="Photo" color="#78b5f9" />
-          <InputOption Icon={Subscriptions} title="Video" color="#e7a33e" />
-          <InputOption Icon={EventNote} title="Event" color="#c0cbcd" />
+          <InputOption Icon={Image} title="Photo" color="#70B5F9" />
+          <InputOption Icon={Subscriptions} title="Video" color="#7FC15E" />
+          <InputOption Icon={EventNote} title="Event" color="#E7A33E" />
           <InputOption
             Icon={CalendarViewDay}
             title="Write article"
-            color="#7fc15e"
+            color="#FC9295"
           />
         </div>
       </div>
 
       <div className="posts">
-        {posts.map((post) => (
-          <Post key={post.id} id={post.id} post={post.data()} />
-        ))}
+        <FlipMove
+          enterAnimation="accordionVertical"
+          leaveAnimation="accordionVertical"
+        >
+          {posts.map((post) => (
+            <Post key={post.id} id={post.id} post={post.data()} />
+          ))}
+        </FlipMove>
       </div>
     </div>
   );
