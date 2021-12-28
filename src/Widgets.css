@@ -1,0 +1,55 @@
+.widgets {
+  position: sticky;
+  /* top: 70px; */
+  flex: 0.28;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  height: fit-content;
+  padding: 10px;
+}
+.widgets_header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.widgets_header > h2 {
+  font-size: 17px;
+}
+.widgets_body {
+  padding: 5px;
+}
+.widgets_body > div.single_widgets {
+  display: flex;
+  margin-top: 10px;
+}
+.single_widgets div.single_widgets_description {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.single_widgets_description > h2 {
+  font-size: 14px;
+}
+
+.widgets_footer > button {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: gray;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  margin-top: 10px;
+  transition: background-color 500ms ease;
+}
+.widgets_footer > button:hover {
+  background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+  .widgets {
+    margin: 0 10px;
+  }
+}

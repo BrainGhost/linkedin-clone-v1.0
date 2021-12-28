@@ -1,0 +1,87 @@
+.modal_container {
+  position: absolute;
+  top: 400px;
+  background-color: white;
+  z-index: 999;
+  width: 800px;
+  min-height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  align-items: center;
+}
+.modal_header > h2 {
+  font-size: 23px;
+  font-weight: 300;
+  padding-left: 20px;
+}
+.modal_header > div.close_button {
+  padding: 7px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  transition: background-color 300ms ease;
+  margin: 10px;
+}
+div.close_button:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+.modal_body {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+.modal_body > button {
+  padding: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a66c2;
+  background-color: transparent;
+  transition: background-color 300ms ease;
+  border: none;
+  border-radius: 5px;
+}
+.modal_body > button:hover {
+  background-color: #0a66c22f;
+  cursor: pointer;
+}
+.modal_footer {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(240, 240, 240);
+  justify-content: flex-end;
+}
+.modal_button {
+  display: flex;
+  margin: 10px 20px;
+}
+
+.modal_button > button:first-child {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #0a66c2;
+  background-color: white;
+  border: 1px solid #0a66c2;
+  margin-top: 0;
+}
+.modal_button > button:last-child {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  background-color: #0a66c2;
+  border-radius: 20px;
+}

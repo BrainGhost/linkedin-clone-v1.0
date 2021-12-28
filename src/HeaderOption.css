@@ -19,3 +19,19 @@
   height: 25px !important;
   width: 25px !important;
 }
+@media only screen and (max-width: 600px) {
+  .headerOption {
+    margin: 10px;
+  }
+  .headerOption_title {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .headerOption {
+    margin: 6px;
+  }
+  /* .headerOption_title {
+    display: block;
+  } */
+}

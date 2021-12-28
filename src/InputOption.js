@@ -1,9 +1,9 @@
 import React from "react";
 import "./InputOption.css";
 
-function InputOption({ Icon, title, color }) {
+function InputOption({ OpenModal, Icon, title, color }) {
   return (
-    <div className="inputOption">
+    <div className="inputOption" onClick={OpenModal}>
       <Icon style={{ color: color }} />
       <h4>{title}</h4>
     </div>

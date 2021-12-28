@@ -1,8 +1,8 @@
-import { Avatar } from "@material-ui/core";
-import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
-import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
-import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
-import ThumbUpOutlinedIcon from "@material-ui/icons/ThumbUpOutlined";
+import CommentIcon from "@mui/icons-material/Comment";
+import SendIcon from "@mui/icons-material/Send";
+import ShareIcon from "@mui/icons-material/Share";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import { Avatar } from "@mui/material";
 import React, { forwardRef } from "react";
 import InputOption from "./InputOption";
 import "./Post.css";
@@ -13,7 +13,7 @@ const Post = forwardRef(
       //I can also do Option chaining like post?.name
       <div ref={ref} className="post">
         <div className="post_header">
-          <Avatar />
+          <Avatar src={photoUrl}>{name[0]}</Avatar>
           <div className="post_info">
             <h2>{name}</h2>
             <p>{description}</p>
@@ -21,13 +21,14 @@ const Post = forwardRef(
         </div>
         <div className="post_body">
           <p>{message}</p>
+          {/* Chnages this will uploaded image */}
           <img src={photoUrl} alt="" />
         </div>
         <div className="post_buttons">
-          <InputOption Icon={ThumbUpOutlinedIcon} title="Like" color="gray" />
-          <InputOption Icon={ChatOutlinedIcon} title="Comment" color="gray" />
-          <InputOption Icon={ShareOutlinedIcon} title="Share" color="gray" />
-          <InputOption Icon={SendOutlinedIcon} title="Send" color="gray" />
+          <InputOption Icon={ThumbUpIcon} title="Like" color="gray" />
+          <InputOption Icon={CommentIcon} title="Comment" color="gray" />
+          <InputOption Icon={ShareIcon} title="Share" color="gray" />
+          <InputOption Icon={SendIcon} title="Send" color="gray" />
         </div>
       </div>
     );

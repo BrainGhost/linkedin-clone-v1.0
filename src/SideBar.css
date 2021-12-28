@@ -1,13 +1,14 @@
 .sidebar {
   position: sticky;
-  top: 63px;
-  flex: 0.2;
+  top: 70px;
+  flex: 0.22;
   border-radius: 10px;
   text-align: center;
   height: fit-content;
 }
 .sidebar_avatar {
   margin-bottom: 10px;
+  border: 2px solid white;
 }
 .sidebar_top {
   display: flex;
@@ -21,10 +22,11 @@
   background-color: white;
   overflow: hidden;
 }
-.sidebar_top > h4 {
+.sidebar_top > p {
   color: gray;
-  font-size: 12px;
+  font-size: 15px;
   padding: 0 10px;
+  font-weight: 300;
 }
 .sidebar_top > h2 {
   font-size: 15px;
@@ -32,29 +34,76 @@
 }
 
 .sidebar_top > img {
-  margin-bottom: -20px;
+  margin-bottom: -40px;
   width: 100%;
   height: 80px;
   object-fit: cover;
 }
+.sidebar_stats {
+  padding: 13px 0;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+.sidebar_stats_2 {
+  padding: 13px 10px;
+  border-right: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  background-color: white;
+  transition: background-color 500ms ease;
+  text-align: left;
+}
+.sidebar_stats_2 > h4 {
+  display: flex;
+  align-items: center;
+}
+.sidebar_stats_2 > h4 > span {
+  padding-right: 5px;
+}
+.sidebar_stats_2 > p {
+  font-weight: 300;
+  line-height: 2;
+}
+.sidebar_stats_2:hover > h4 {
+  color: #0a66c2;
+}
+.sidebar_stats_3 {
+  padding: 13px 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: background-color 500ms ease;
+}
+.sidebar_stats_3 > h4 {
+  display: flex;
+  align-items: center;
+}
+.sidebar_stats_2:hover,
+.sidebar_stats_3:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
 .sidebar_stat {
-  margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  padding: 7px 10px;
+  transition: background-color 500ms ease;
+}
+.sidebar_stat:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
 }
 .sidebar_stat > p {
   color: gray;
   font-size: 13px;
   font-weight: 600;
+  text-align: left;
 }
-.sidebar_stats {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid lightgray;
-  background-color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+.sidebar_stat > p span {
+  color: black;
 }
+
 .sidebar_statNumber {
   font-weight: bold;
   color: #0a66c2 !important;
@@ -90,4 +139,25 @@
 .sidebar_hash {
   margin-right: 10px;
   margin-left: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    position: relative;
+    top: 0;
+    flex: 0.22;
+    border-radius: 10px;
+    text-align: center;
+    height: fit-content;
+    margin: 0 10px;
+  }
+  /* .sidebar_top:hover + .sidebar_stats {
+    display: block;
+  } */
+  .sidebar_stats,
+  .sidebar_stats_2,
+  .sidebar_stats_3,
+  .sidebar_bottom {
+    display: none;
+  }
 }

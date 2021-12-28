@@ -1,0 +1,24 @@
+.widgetsButton {
+  background-color: white;
+  padding: 3px 18px;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(107, 107, 107);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 5px;
+
+  outline: 1px solid gray;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.widgetsButton:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+  outline: 0px solid transparent;
+  border: 2px solid gray;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}

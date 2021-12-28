@@ -1,14 +1,23 @@
-import AppsIcon from "@material-ui/icons/Apps";
-import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
-import ChatIcon from "@material-ui/icons/Chat";
-import HomeIcon from "@material-ui/icons/Home";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import SearchIcon from "@material-ui/icons/Search";
-import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
+import AppsIcon from "@mui/icons-material/Apps";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import ChatIcon from "@mui/icons-material/Chat";
+import HomeIcon from "@mui/icons-material/Home";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import SearchIcon from "@mui/icons-material/Search";
+import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "./features/counter/userSlice";
+import { auth } from "./firebase";
 import "./Header.css";
 import HeaderOption from "./HeaderOption";
 
 function Header() {
+  const dispatch = useDispatch();
+  const logoutFromApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+  const user = useSelector(selectUser);
   return (
     <div className="header-container">
       <div className="header">
@@ -25,12 +34,17 @@ function Header() {
           <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
           <HeaderOption Icon={ChatIcon} title="Messaging" />
           <HeaderOption Icon={NotificationsIcon} title="Notification" />
-          <HeaderOption avatar="./avatar.svg" title="Me" />
+          <HeaderOption
+            avatar={true}
+            title={user.displayName}
+            onClick={logoutFromApp}
+          />
           <div className="verticalBar"></div>
           <HeaderOption Icon={AppsIcon} title="Work" />
           <button className="optionPremium">
-            Try Premium for
-            <br /> free
+            Get Hired Faster,
+            <br />
+            Try Premium free
           </button>
         </div>
       </div>

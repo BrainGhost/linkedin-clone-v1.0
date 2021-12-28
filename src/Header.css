@@ -57,7 +57,7 @@ button.optionPremium {
   font-size: 14px;
   font-weight: 500;
   margin: 10px 0 10px 10px;
-  color: gray;
+  color: #5d3b09;
   cursor: pointer;
   transition: 500ms ease;
   background-color: white;
@@ -65,4 +65,23 @@ button.optionPremium {
 }
 button.optionPremium:hover {
   text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+  button.optionPremium {
+    display: none;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .header_search input {
+    display: none;
+  }
+  .verticalBar {
+    margin: 0px;
+  }
+  button.optionPremium {
+    display: none;
+  }
+  .header {
+    margin: 0 10px;
+  }
 }

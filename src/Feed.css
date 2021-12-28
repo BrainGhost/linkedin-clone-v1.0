@@ -9,13 +9,19 @@
   border-radius: 10px;
   margin-bottom: 20px;
 }
+.feed_inputContainer > div {
+  display: flex;
+}
 .feed_input {
   border: 1px solid lightgray;
   border-radius: 30px;
   display: flex;
-  padding: 10px;
+  align-items: center;
+  flex: 1;
+  padding: 5px;
   color: gray;
   padding-left: 15px;
+  margin-left: 10px;
 }
 .feed_input > form {
   display: flex;
@@ -24,9 +30,11 @@
 .feed_input > form > input {
   border: none;
   flex: 1;
-  margin-left: 10px;
+  margin-left: 5px;
   outline: none;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 5px;
 }
 .feed_input > form > button {
   display: none;
@@ -34,4 +42,10 @@
 .feed_inputOptions {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 600px) {
+  .feed {
+    margin: 0 10px;
+  }
 }
