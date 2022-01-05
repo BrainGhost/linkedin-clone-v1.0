@@ -36,6 +36,7 @@ function App() {
       {!user ? (
         <Login />
       ) : (
+        // <Register />
         <>
           <Header />
           <div className="app_body">

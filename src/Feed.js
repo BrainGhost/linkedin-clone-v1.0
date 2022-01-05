@@ -21,6 +21,7 @@ import { db } from "./firebase";
 import InputOption from "./InputOption";
 import Modal from "./Modal";
 import Post from "./Post";
+import PostModal from "./PostModal";
 
 function Feed() {
   const [input, setInput] = useState("");
@@ -47,15 +48,31 @@ function Feed() {
     });
     setInput("");
   };
-  const addImageToPost = () => {
-    const reader = new FileReader();
-  };
+
   const [showModal, setShowModal] = useState(true);
   const openModal = () => {
     setShowModal(!showModal);
     console.log(showModal);
   };
   const user = useSelector(selectUser);
+  const [showModal_2, setShowModal_2] = useState("close");
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (e.target !== e.currentTarget) {
+      return;
+    }
+    switch (showModal_2) {
+      case "open":
+        setShowModal_2("close");
+        break;
+      case "close":
+        setShowModal_2("open");
+        break;
+      default:
+        setShowModal_2("close");
+        break;
+    }
+  };
   return (
     <div className="feed">
       <div className="feed_inputContainer">
@@ -64,8 +81,8 @@ function Feed() {
             {user.email[0].toUpperCase()}
           </Avatar>
           <div className="feed_input">
-            <CreateIcon />
             <form>
+              {/* <CreateIcon />
               <input
                 type="text"
                 value={input}
@@ -74,6 +91,11 @@ function Feed() {
               />
               <button onClick={sendPost} type="submit">
                 Send
+              </button> */}
+
+              <button onClick={handleClick} className="search_btn">
+                <CreateIcon />
+                Start a post
               </button>
             </form>
           </div>
@@ -86,7 +108,12 @@ function Feed() {
             title="Photo"
             color="#70B5F9"
           />
-          <InputOption Icon={SubscriptionsIcon} title="Video" color="#7FC15E" />
+          <InputOption
+            OpenModal={openModal}
+            Icon={SubscriptionsIcon}
+            title="Video"
+            color="#7FC15E"
+          />
           <InputOption Icon={EventIcon} title="Event" color="#E7A33E" />
           <InputOption
             Icon={ArticleIcon}
@@ -97,8 +124,12 @@ function Feed() {
       </div>
       {/* Modal here */}
 
-      <Modal showModal={showModal} setShowModal={setShowModal} />
-
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        title_option="videooo"
+      />
+      <PostModal showModal={showModal_2} handleClick={handleClick} />
       <div className="posts">
         <FlipMove>
           {posts.map((post) => (

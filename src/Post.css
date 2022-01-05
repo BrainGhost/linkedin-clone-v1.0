@@ -1,12 +1,11 @@
 .post {
   background-color: white;
-  padding: 15px;
   margin-bottom: 10px;
   border-radius: 10px;
 }
 .post_header {
   display: flex;
-  margin-bottom: 10px;
+  padding: 10px 15px;
 }
 .post_info {
   margin-left: 10px;
@@ -18,21 +17,26 @@
 .post_info > h2 {
   font-size: 15px;
 }
+.post_info > h2 > span {
+  font-size: 15px;
+  font-weight: 400;
+  color: gray;
+}
 .post_body {
   overflow-wrap: anywhere;
 }
 .post_body > p {
   font-size: 15px;
   font-weight: 400;
+  padding: 0 15px;
 }
 .post_body > img {
-  margin-top: 10px;
   width: 100%;
   object-fit: contain;
+  max-height: 400px;
 }
 .post_buttons {
   display: flex;
   justify-content: space-evenly;
   border-top: 0.1px solid rgba(211, 211, 211, 0.5);
-  margin-top: 20px;
 }

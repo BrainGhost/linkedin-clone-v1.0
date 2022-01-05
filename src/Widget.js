@@ -9,8 +9,17 @@ import WidgetsButton from "./WidgetsButton";
 function Widget() {
   const singleWidgets = (title, details) => (
     <div className="single_widgets">
-      <Avatar sx={{ width: 56, height: 56 }} src={""}>
-        {"LG"}
+      <Avatar
+        sx={{
+          width: 50,
+          height: 50,
+          backgroundColor: "white",
+          color: "#0a66c2",
+          border: "1px solid #0a66c2",
+        }}
+        src={""}
+      >
+        {title[0].toUpperCase()}
       </Avatar>
       <div className="single_widgets_description">
         <h2>{title}</h2>
