@@ -45,22 +45,23 @@ function Feed() {
       message: input,
       photoUrl: user.photoURL || "",
       timestamp: serverTimestamp(),
-    });
+    }).catch((error) => console.log(error));
     setInput("");
   };
 
   const [showModal, setShowModal] = useState(true);
   const openModal = () => {
     setShowModal(!showModal);
-    console.log(showModal);
   };
   const user = useSelector(selectUser);
   const [showModal_2, setShowModal_2] = useState("close");
-  const handleClick = (e) => {
-    e.preventDefault();
-    if (e.target !== e.currentTarget) {
-      return;
-    }
+
+  const handleClick = () => {
+    // e.preventDefault();
+    // if (e.target !== e.currentTarget) {
+    //   return;
+    // }
+
     switch (showModal_2) {
       case "open":
         setShowModal_2("close");
@@ -81,23 +82,10 @@ function Feed() {
             {user.email[0].toUpperCase()}
           </Avatar>
           <div className="feed_input">
-            <form>
-              {/* <CreateIcon />
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Start a post"
-              />
-              <button onClick={sendPost} type="submit">
-                Send
-              </button> */}
-
-              <button onClick={handleClick} className="search_btn">
-                <CreateIcon />
-                Start a post
-              </button>
-            </form>
+            <button onClick={handleClick} className="search_btn">
+              <CreateIcon />
+              Start a post
+            </button>
           </div>
         </div>
 
@@ -108,12 +96,7 @@ function Feed() {
             title="Photo"
             color="#70B5F9"
           />
-          <InputOption
-            OpenModal={openModal}
-            Icon={SubscriptionsIcon}
-            title="Video"
-            color="#7FC15E"
-          />
+          <InputOption Icon={SubscriptionsIcon} title="Video" color="#7FC15E" />
           <InputOption Icon={EventIcon} title="Event" color="#E7A33E" />
           <InputOption
             Icon={ArticleIcon}

@@ -1,32 +1,45 @@
-.login {
-  display: flex;
-  flex-direction: column;
+.register {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
 }
 
-.login > img {
-  height: 180px;
+.register > img {
+  height: 100px;
   object-fit: contain;
 }
-.login > form {
+.register > div.form {
   display: flex;
   flex-direction: column;
   color: gray;
   font-size: 15px;
-  width: 450px;
+  width: 350px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 10px;
 }
-.login > form > h2 {
-  font-size: 25px;
+.register > div.form > h2 {
+  font-size: 30px;
   color: black;
-  text-align: center;
-  font-weight: 400;
-  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-top: 20px;
 }
-.login > form > label {
+.register > div.form > h5 {
+  font-size: 12px;
+  color: black;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.register > div.form > label {
   margin-bottom: 5px;
 }
-.login > form > input {
+.register > div.form > input {
   height: 35px;
   outline: none;
   font-size: 15px;
@@ -36,22 +49,22 @@
   background-color: transparent;
   border: 1px solid gray;
 }
-.login > form > p {
-  text-align: center;
+span.register-forgot {
+  text-align: left;
   margin-bottom: 20px;
 }
-.login > form > button {
+.register > div.form > button {
   border-radius: 100px;
   padding: 15px;
   transition: 500ms ease;
 }
 
-.login > form > button.btn-login {
+.register > div.form > button.btn-register {
   border: none;
   background-color: #0a66c2;
   color: whitesmoke;
 }
-.login > form > button.btn-google {
+.register > div.form > button.btn-google {
   border: 1px solid #0a66c2;
   color: #0a66c2;
   background-color: transparent;
@@ -59,17 +72,25 @@
   font-size: 14px;
   font-weight: 600;
 }
-.login > form > button.btn-login:hover {
+.register > div.form > button.btn-register:hover {
   background-color: #00366d;
   cursor: pointer;
 }
-.login > form > button.btn-google:hover {
+.register > div.form > button.btn-google:hover {
   background-color: #0a66c22c;
   cursor: pointer;
 }
-.login > form > p > span.login_register {
+.register > div.form > p > span.login_register {
   font-size: 14px;
   font-weight: 600;
   color: #0a66c2;
   cursor: pointer;
+  padding: 5px;
+}
+.register > div.form > p > span.login_register:hover {
+  text-decoration: underline;
+}
+.register > div.form > p {
+  text-align: center;
+  margin-bottom: 20px;
 }

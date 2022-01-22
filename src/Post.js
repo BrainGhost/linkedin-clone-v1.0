@@ -5,12 +5,16 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import { Avatar } from "@mui/material";
 import React, { forwardRef } from "react";
 import Moment from "react-moment";
+import ReactPlayer from "react-player";
 import InputOption from "./InputOption";
 import "./Post.css";
 
 const Post = forwardRef(
   (
-    { id, post: { name, description, message, photoUrl, image, timestamp } },
+    {
+      id,
+      post: { name, description, message, photoUrl, image, timestamp, video },
+    },
     ref
   ) => {
     return (
@@ -31,8 +35,15 @@ const Post = forwardRef(
         </div>
         <div className="post_body">
           <p>{message}</p>
-          {/* Chnages this will uploaded image */}
-          <img src={image} alt="" />
+          {image && <img src={image} alt="Alter_image" />}
+          {video && (
+            <ReactPlayer
+              url={video}
+              width={"100%"}
+              controls={true}
+              volume={0.1}
+            />
+          )}
         </div>
         <div className="post_buttons">
           <InputOption Icon={ThumbUpIcon} title="Like" color="gray" />

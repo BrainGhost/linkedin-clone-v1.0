@@ -1,7 +1,7 @@
 .inputOption {
   display: flex;
   align-items: center;
-  margin-top: 15px;
+  margin: 10px 0;
   cursor: pointer;
   padding: 10px;
   color: gray;
@@ -13,4 +13,27 @@
 }
 .inputOption > h4 {
   margin-left: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .inputOption {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 0;
+    padding: 5px;
+  }
+  .inputOption > h4 {
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .inputOption {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: red;
+  }
 }

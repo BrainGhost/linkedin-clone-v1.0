@@ -16,7 +16,7 @@ import React, { useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "./features/counter/userSlice";
 import { db } from "./firebase";
-// import "./Modal.css";
+import "./Modal.css";
 import WidgetsButton from "./WidgetsButton";
 
 function Modal({ showModal, setShowModal, title_option }) {
@@ -51,7 +51,7 @@ function Modal({ showModal, setShowModal, title_option }) {
       name: user.displayName,
       description: "Image post",
       message: "",
-      //   imagePost: selectedImage,
+      imagePost: selectedImage,
       photoUrl: user.photoURL || "",
       timestamp: serverTimestamp(),
     });

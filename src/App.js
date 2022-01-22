@@ -1,16 +1,21 @@
 import { onAuthStateChanged } from "firebase/auth";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import { login, logout, selectUser } from "./features/counter/userSlice";
 import Feed from "./Feed";
 import { auth } from "./firebase";
 import Header from "./Header";
-import Login from "./Login";
+import Register from "./Login";
+import Login from "./Register";
 import SideBar from "./SideBar";
 import Widget from "./Widget";
 
 function App() {
+  const [switchPage, setswitchPage] = useState(false);
+  const handleSwitch = () => {
+    setswitchPage(!switchPage);
+  };
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -34,7 +39,11 @@ function App() {
   return (
     <div className="app">
       {!user ? (
-        <Login />
+        switchPage ? (
+          <Login handleSwitch={handleSwitch} />
+        ) : (
+          <Register handleSwitch={handleSwitch} />
+        )
       ) : (
         // <Register />
         <>
