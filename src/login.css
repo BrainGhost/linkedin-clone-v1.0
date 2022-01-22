@@ -5,8 +5,10 @@
 }
 
 .register > img {
+  width: 150px;
   height: 100px;
   object-fit: contain;
+  margin-left: 20px;
 }
 .register > div.form {
   display: flex;

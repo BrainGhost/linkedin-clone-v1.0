@@ -61,7 +61,7 @@ function Register({ handleSwitch }) {
   };
   return (
     <div className="login">
-      <img src="./link-Logo.png" alt="" />
+      <img src="./LinkedIn_Logo.svg" alt="" />
       <div className="form">
         <h2>Make the most of your professional life</h2>
         <label>Full Name (Required if registering)</label>

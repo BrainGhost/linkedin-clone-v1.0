@@ -33,7 +33,7 @@ function Login({ handleSwitch }) {
   };
   return (
     <div className="register">
-      <img src="./link-Logo.png" alt="" />
+      <img src="./LinkedIn_Logo.svg" alt="" />
       <div className="form">
         <h2>Sign in</h2>
         <h5>Stay updtaed on your professional world</h5>
