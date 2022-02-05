@@ -23,8 +23,11 @@
 - Mobile Responsive
 
 ## 💻Getting started
+[![](https://github.com/BrainGhost/linkedin-clone-v1.0/blob/main/public/screenLinkedIn.jpg)](https://github.com/BrainGhost/linkedin-clone-v1.0/blob/main/public/screenLinkedIn.jpg)
+------------
+[ **View DEMO**](http://linkedin-clone-20c26.web.app/ "# **View DEMO**")
 
-[# **View DEMO**](http://linkedin-clone-20c26.web.app/ "# **View DEMO**")
+------------
 
 ### Requirements
 
