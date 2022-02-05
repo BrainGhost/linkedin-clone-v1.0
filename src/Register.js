@@ -97,7 +97,7 @@ function Register({ handleSwitch }) {
           Agree & Join
         </button>
         <button className="btn-google" onClick={signInWithGoogle}>
-          <img src="google.svg" />
+          <img src="google.svg" alt="" />
           Join with Google
         </button>
         <p>

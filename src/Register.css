@@ -82,3 +82,9 @@ button.btn-google img {
   color: #0a66c2;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 480px) {
+  .login > div.form {
+    width: 300px;
+  }
+}

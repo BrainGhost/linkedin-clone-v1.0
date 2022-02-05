@@ -42,10 +42,12 @@
   outline: none;
   border: none;
   background: none;
+  width: 100%;
 }
 .header_right {
   display: flex;
 }
+
 .verticalBar {
   width: 2px;
   /* height: 72px; */
@@ -69,6 +71,18 @@ button.optionPremium:hover {
 @media only screen and (max-width: 600px) {
   button.optionPremium {
     display: none;
+  }
+  .header-container {
+    padding: 8px 0;
+  }
+  .header_search input {
+    display: flex !important;
+  }
+  .header_right > div:nth-child(6) {
+    display: flex;
+  }
+  .header_right > div:nth-child(8) {
+    display: flex;
   }
 }
 @media only screen and (max-width: 992px) {

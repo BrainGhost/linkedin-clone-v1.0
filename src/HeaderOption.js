@@ -6,12 +6,21 @@ import "./HeaderOption.css";
 function HeaderOption({ avatar, Icon, title, onClick }) {
   const user = useSelector(selectUser);
   return (
-    <div onClick={onClick} className="headerOption">
+    <div className="headerOption">
       {Icon && <Icon className="headerOption_icon" />}
       {avatar && (
-        <Avatar className="headerOption_icon" src={user.photoURL}>
-          {user?.email[0].toUpperCase()}
-        </Avatar>
+        <>
+          <div className="dropdown">
+            <button>
+              <Avatar className=" headerOption_icon" src={user.photoURL}>
+                {user?.email[0].toUpperCase()}
+              </Avatar>
+            </button>
+            <div className="dropdown_menu">
+              <h5 onClick={onClick}>Logout</h5>
+            </div>
+          </div>
+        </>
       )}
       <h4 className="headerOption_title">{title}</h4>
     </div>

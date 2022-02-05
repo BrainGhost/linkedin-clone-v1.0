@@ -98,11 +98,7 @@ function Feed() {
           />
           <InputOption Icon={SubscriptionsIcon} title="Video" color="#7FC15E" />
           <InputOption Icon={EventIcon} title="Event" color="#E7A33E" />
-          <InputOption
-            Icon={ArticleIcon}
-            title="Write article"
-            color="#FC9295"
-          />
+          <InputOption Icon={ArticleIcon} title="Article" color="#FC9295" />
         </div>
       </div>
       {/* Modal here */}

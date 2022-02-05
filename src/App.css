@@ -12,15 +12,20 @@
   width: 100%;
   margin-top: 10px;
 }
+.app_feed_widget {
+  display: flex;
+  flex: 1;
+}
+
 @media only screen and (max-width: 600px) {
   .app_body {
     display: flex;
     flex-direction: column;
   }
 }
-/* @media screen {
-  .app_body {
+@media only screen and (max-width: 992px) {
+  .app_feed_widget {
     display: flex;
     flex-direction: column;
   }
-} */
+}

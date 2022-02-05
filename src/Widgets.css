@@ -1,7 +1,7 @@
 .widgets {
   position: sticky;
   /* top: 70px; */
-  flex: 0.28;
+  flex: 0.3;
   background-color: white;
   border-radius: 10px;
   border: 1px solid lightgray;
@@ -51,5 +51,10 @@
 @media only screen and (max-width: 600px) {
   .widgets {
     margin: 0 10px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .widgets {
+    margin: 0 20px;
   }
 }

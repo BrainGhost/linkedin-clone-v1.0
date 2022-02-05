@@ -96,3 +96,8 @@ span.register-forgot {
   text-align: center;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 450px) {
+  .register > div.form {
+    width: 280px;
+  }
+}

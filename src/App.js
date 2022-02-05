@@ -5,6 +5,7 @@ import "./App.css";
 import { login, logout, selectUser } from "./features/counter/userSlice";
 import Feed from "./Feed";
 import { auth } from "./firebase";
+import Footer from "./Footer";
 import Header from "./Header";
 import Register from "./Login";
 import Login from "./Register";
@@ -35,7 +36,7 @@ function App() {
         dispatch(logout());
       }
     });
-  }, []);
+  }, [dispatch]);
   return (
     <div className="app">
       {!user ? (
@@ -50,9 +51,12 @@ function App() {
           <Header />
           <div className="app_body">
             <SideBar />
-            <Feed />
-            <Widget />
+            <div className="app_feed_widget">
+              <Feed />
+              <Widget />
+            </div>
           </div>
+          <Footer />
         </>
       )}
     </div>

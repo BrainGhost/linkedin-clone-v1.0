@@ -161,3 +161,8 @@
     display: none;
   }
 }
+@media only screen and (max-width: 992px) {
+  .sidebar {
+    margin-left: 10px;
+  }
+}

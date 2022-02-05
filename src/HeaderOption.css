@@ -13,15 +13,47 @@
 .headerOption_title {
   font-size: 12px;
   font-weight: 400;
+  text-align: center;
 }
 .headerOption_icon {
   object-fit: contain;
   height: 25px !important;
   width: 25px !important;
 }
+.dropdown {
+  position: relative;
+}
+.dropdown_menu {
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  padding: 8px 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+}
+.dropdown_menu > h5 {
+  padding: 5px 0.75rem;
+}
+.dropdown_menu > h5:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  transition: background-color 500ms ease;
+}
+.dropdown > button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.dropdown > button:focus + .dropdown_menu {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 600px) {
   .headerOption {
     margin: 10px;
+    display: none;
   }
   .headerOption_title {
     display: none;
