@@ -1,44 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# **LinkedIn Clone 2022🔎**
 
-## LinkedIn_Clone
+> Linkedin Clone 2022 is a project developed using React JS. It is clone of the current Linkedin UI 2022 . The first page to display is the login page, and if you are not registered, one will directed to the Register page or Sign in with google is enabled through firebase as a backend.
 
-In the project directory, you can run:
+**_`Star⭐ the Project if you like it 💻`_**
 
-### `npm start`
+> It is a simple LinkedIn Clone using ReactJs, Redux, Firebase DB(Firestore) and Firebase Auth.
+> referencing a tutorial on YouTube by 'Sonny sangha'. Added some features apart from the tutorial on my own like:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Exact UI as linkedin 2022.
+- created a modal just like Linkedin to create a post.
+- Fully responsiveness(oth mobile and web)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### ⚓Features and Fuctionality
 
-### `npm test`
+- Login using both Email and Google Authentication( Firease auth )
+- Display the logged user( name, email, Avatar ).
+- The app generate a random number of followers and connection for each user.
+- Create a new post( A post to which one can add and image or a video )
+- Share photos and videos (React player for videos)
+- Auto authenticate user on refresh
+- Sign Out with a nice dropdown on the header Avatar
+- Mobile Responsive
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💻Getting started
 
-### `npm run build`
+[# **View DEMO**](http://linkedin-clone-20c26.web.app/ "# **View DEMO**")
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Requirements
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [Node.js](http://nodejs.dev/learn/how-to-install-nodejs "Node.js")
+- [Yarn](https://yarnpkg.com/ "Yarn") or [npm](http://www.npmjs.com/ "npm")
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Clone this Project
 
-### `npm run eject`
+```bash
+$ git clone https://github.com/BrainGhost/linkedin_clone.git
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+$ cd linkedin_clone
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Follow these steps
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+# Install the dependencies
+$ npm
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Run the web app
+$ npm run start
+```
 
-## Learn More
+## Future plans
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add comments on post
+- Like posts
+- Realtime update likes
+- Post deleting functionality
