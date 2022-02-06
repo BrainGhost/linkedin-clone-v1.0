@@ -10,7 +10,7 @@
   object-fit: contain;
   margin-left: 20px;
 }
-.register > form > div.form {
+.register > div.form {
   display: flex;
   flex-direction: column;
   color: gray;
@@ -24,7 +24,7 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-radius: 10px;
 }
-.register > form > div.form > h2 {
+.register > div.form > h2 {
   font-size: 30px;
   color: black;
   text-align: left;
@@ -32,16 +32,16 @@
   padding-bottom: 5px;
   padding-top: 20px;
 }
-.register > form > div.form > h5 {
+.register > div.form > h5 {
   font-size: 12px;
   color: black;
   font-weight: 400;
   margin-bottom: 30px;
 }
-.register > form > div.form > label {
+.register > div.form > label {
   margin-bottom: 5px;
 }
-.register > form > div.form > input {
+.register > div.form > input {
   height: 35px;
   outline: none;
   font-size: 15px;
@@ -55,18 +55,18 @@ span.register-forgot {
   text-align: left;
   margin-bottom: 20px;
 }
-.register > form > div.form > button {
+.register > div.form > button {
   border-radius: 100px;
   padding: 15px;
   transition: 500ms ease;
 }
 
-.register > form > div.form > button.btn-register {
+.register > div.form > button.btn-register {
   border: none;
   background-color: #0a66c2;
   color: whitesmoke;
 }
-.register > form > div.form > button.btn-google {
+.register > div.form > button.btn-google {
   border: 1px solid #0a66c2;
   color: #0a66c2;
   background-color: transparent;
@@ -74,30 +74,30 @@ span.register-forgot {
   font-size: 14px;
   font-weight: 600;
 }
-.register > form > div.form > button.btn-register:hover {
+.register > div.form > button.btn-register:hover {
   background-color: #00366d;
   cursor: pointer;
 }
-.register > form > div.form > button.btn-google:hover {
+.register > div.form > button.btn-google:hover {
   background-color: #0a66c22c;
   cursor: pointer;
 }
-.register > form > div.form > p > span.login_register {
+.register > div.form > p > span.login_register {
   font-size: 14px;
   font-weight: 600;
   color: #0a66c2;
   cursor: pointer;
   padding: 5px;
 }
-.register > form > div.form > p > span.login_register:hover {
+.register > div.form > p > span.login_register:hover {
   text-decoration: underline;
 }
-.register > form > div.form > p {
+.register > div.form > p {
   text-align: center;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 450px) {
-  .register > form > div.form {
+  .register > div.form {
     width: 280px;
   }
 }

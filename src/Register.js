@@ -62,55 +62,52 @@ function Register({ handleSwitch }) {
   return (
     <div className="login">
       <img src="./LinkedIn_Logo.svg" alt="" />
-      <form>
-        <div className="form">
-          <h2>Make the most of your professional life</h2>
-          <label>Full Name (Required if registering)</label>
-          <input
-            type="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <label>Profile image (Optional)</label>
-          <input
-            type="profile"
-            value={profilePic}
-            onChange={(e) => setProfilePic(e.target.value)}
-          />
-          <label>Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <label>Password (6 or more characters)</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <p>
-            By clicking Agree & join, you agree to the LinkedIn{" "}
-            <span className="login_register">
-              User agreement privacy Policy,
-            </span>{" "}
-            and Cookie Policy
-          </p>
-          <button className="btn-login" onClick={registerToApp}>
-            Agree & Join
-          </button>
-          <button className="btn-google" onClick={signInWithGoogle}>
-            <img src="google.svg" alt="" />
-            Join with Google
-          </button>
-          <p>
-            Already on LinkedIn?{" "}
-            <span className="login_register" onClick={handleSwitch}>
-              Sign in
-            </span>
-          </p>
-        </div>
-      </form>
+
+      <div className="form">
+        <h2>Make the most of your professional life</h2>
+        <label>Full Name (Required if registering)</label>
+        <input
+          type="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <label>Profile image (Optional)</label>
+        <input
+          type="profile"
+          value={profilePic}
+          onChange={(e) => setProfilePic(e.target.value)}
+        />
+        <label>Email</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label>Password (6 or more characters)</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <p>
+          By clicking Agree & join, you agree to the LinkedIn{" "}
+          <span className="login_register">User agreement privacy Policy,</span>{" "}
+          and Cookie Policy
+        </p>
+        <button className="btn-login" onClick={registerToApp}>
+          Agree & Join
+        </button>
+        <button className="btn-google" onClick={signInWithGoogle}>
+          <img src="google.svg" alt="" />
+          Join with Google
+        </button>
+        <p>
+          Already on LinkedIn?{" "}
+          <span className="login_register" onClick={handleSwitch}>
+            Sign in
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
