@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "./features/counter/userSlice";
 import { auth, signInWithGoogle } from "./firebase";
-import "./Login.css";
+import "./Register.css";
 function Register({ handleSwitch }) {
   // we need to track if the fields have a value, therefore we create a state
   const [name, setName] = useState("");

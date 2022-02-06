@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "./features/counter/userSlice";
 import { auth } from "./firebase";
-import "./Register.css";
+import "./Login.css";
 
 function Login({ handleSwitch }) {
   const [email, setEmail] = useState("");
