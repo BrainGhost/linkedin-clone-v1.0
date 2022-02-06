@@ -4,7 +4,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  apiKey: "AIzaSyAP7y03WznxZv3YCKj4bPmqrYMwrUAxKxs",
   authDomain: "linkedin-clone-20c26.firebaseapp.com",
   projectId: "linkedin-clone-20c26",
   storageBucket: "linkedin-clone-20c26.appspot.com",
