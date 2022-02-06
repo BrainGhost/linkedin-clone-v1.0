@@ -7,7 +7,7 @@ import Feed from "./Feed";
 import { auth } from "./firebase";
 import Footer from "./Footer";
 import Header from "./Header";
-import Login from "./Login";
+import Register from "./Register";
 import SideBar from "./SideBar";
 import Widget from "./Widget";
 
@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="app">
       {!user ? (
-        <Login handleSwitch={handleSwitch} />
+        <Register handleSwitch={handleSwitch} />
       ) : (
         <>
           <Header />
