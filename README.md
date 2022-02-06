@@ -23,11 +23,12 @@
 - Mobile Responsive
 
 ## 💻Getting started
-[![](https://github.com/BrainGhost/linkedin-clone-v1.0/blob/main/public/screenLinkedIn.jpg)](https://github.com/BrainGhost/linkedin-clone-v1.0/blob/main/public/screenLinkedIn.jpg)
-------------
+
+## [![](https://github.com/BrainGhost/linkedin-clone-v1.0/blob/main/public/screenLinkedIn.jpg)](https://github.com/BrainGhost/linkedin-clone-v1.0/blob/main/public/screenLinkedIn.jpg)
+
 [ **View DEMO**](http://linkedin-clone-20c26.web.app/ "# **View DEMO**")
 
-------------
+---
 
 ### Requirements
 
@@ -41,6 +42,13 @@ $ git clone https://github.com/BrainGhost/linkedin_clone.git
 
 $ cd linkedin_clone
 ```
+
+You need to use you own API_kEY for Firebase, to do that:
+
+1. Create a file called .env
+2. Inside that file, create a variable called REACT_APP_API_KEY
+3. Assign to it your firebase app API_KEY
+4. You are all set now ✔
 
 ### Follow these steps
 

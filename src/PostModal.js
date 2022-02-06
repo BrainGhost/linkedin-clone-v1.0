@@ -36,7 +36,6 @@ function PostModal({ handleClick, showModal }) {
   const user = useSelector(selectUser);
   const storage = getStorage();
   const filePickerRef = useRef(null);
-  const [isLoading, setIsloading] = useState(false);
   const switchAssetArea = (area) => {
     setShareImage("");
     setShareVideo("");
@@ -45,7 +44,6 @@ function PostModal({ handleClick, showModal }) {
   const reset = (e) => {
     setEditortext("");
     setShareImage("");
-    setIsloading(false);
     setShareVideo("");
     setAssetArea("");
     handleClick(e);
@@ -79,7 +77,6 @@ function PostModal({ handleClick, showModal }) {
   };
   const sendPost = async (event) => {
     event.preventDefault();
-    setIsloading(true);
     const docRef = await addDoc(collection(db, "posts"), {
       name: user.displayName,
       description: "This post is from the modal",
@@ -168,7 +165,6 @@ function PostModal({ handleClick, showModal }) {
                             className="close_delete_image"
                             onClick={() => {
                               setShareImage(null);
-                              setIsloading(false);
                             }}
                           >
                             <CloseIcon
@@ -209,7 +205,6 @@ function PostModal({ handleClick, showModal }) {
                               className="close_delete_image"
                               onClick={() => {
                                 setShareVideo(null);
-                                setIsloading(false);
                               }}
                             >
                               <CloseIcon

@@ -34,33 +34,35 @@ function Login({ handleSwitch }) {
   return (
     <div className="register">
       <img src="./LinkedIn_Logo.svg" alt="" />
-      <div className="form">
-        <h2>Sign in</h2>
-        <h5>Stay updtaed on your professional world</h5>
-        <label>Email</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>Password (6 or more characters)</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <span className="register-forgot">Forgot passoword?</span>{" "}
-        <button className="btn-register" onClick={loginToApp}>
-          Sign in
-        </button>
-        <button className="btn-google">Sign in with Apple</button>
-        <p>
-          New on LinkedIn?{" "}
-          <span className="login_register" onClick={handleSwitch}>
-            Join now
-          </span>
-        </p>
-      </div>
+      <form>
+        <div className="form">
+          <h2>Sign in</h2>
+          <h5>Stay updtaed on your professional world</h5>
+          <label>Email</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label>Password (6 or more characters)</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <span className="register-forgot">Forgot passoword?</span>{" "}
+          <button className="btn-register" onClick={loginToApp}>
+            Sign in
+          </button>
+          <button className="btn-google">Sign in with Apple</button>
+          <p>
+            New on LinkedIn?{" "}
+            <span className="login_register" onClick={handleSwitch}>
+              Join now
+            </span>
+          </p>
+        </div>
+      </form>
     </div>
   );
 }

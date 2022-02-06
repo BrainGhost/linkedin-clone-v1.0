@@ -4,14 +4,7 @@ import EventIcon from "@mui/icons-material/Event";
 import ImageIcon from "@mui/icons-material/Image";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import { Avatar } from "@mui/material";
-import {
-  addDoc,
-  collection,
-  onSnapshot,
-  orderBy,
-  query,
-  serverTimestamp,
-} from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import FlipMove from "react-flip-move";
 import { useSelector } from "react-redux";
@@ -24,7 +17,6 @@ import Post from "./Post";
 import PostModal from "./PostModal";
 
 function Feed() {
-  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     // firebase-version 9 (latest)
@@ -35,19 +27,6 @@ function Feed() {
       }
     );
   }, []);
-
-  const sendPost = async (event) => {
-    event.preventDefault();
-
-    const docRef = await addDoc(collection(db, "posts"), {
-      name: user.displayName,
-      description: "test",
-      message: input,
-      photoUrl: user.photoURL || "",
-      timestamp: serverTimestamp(),
-    }).catch((error) => console.log(error));
-    setInput("");
-  };
 
   const [showModal, setShowModal] = useState(true);
   const openModal = () => {
